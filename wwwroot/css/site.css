@@ -1,0 +1,75 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background: linear-gradient(to right, #0f172a, #1e293b);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-navbar {
+    background: linear-gradient(to right, #2563eb, #7c3aed);
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: yellow !important;
+    transform: scale(1.05);
+}
+
+.card-custom {
+    background: white;
+    color: black;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn-custom {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+}
+
+.footer-custom {
+    background: #111827;
+    color: white;
+}
+
+input.form-control {
+    border-radius: 10px;
+    padding: 10px;
+}

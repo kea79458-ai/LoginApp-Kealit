@@ -1,0 +1,48 @@
+﻿@page
+@model LoginApp_Kealit.Pages.RegisterModel
+
+<div class="container mt-5">
+
+    <div class="card p-4 shadow-lg mx-auto"
+         style="max-width:500px; border-radius:20px;">
+
+        <h2 class="text-center text-success mb-4">
+            Register
+        </h2>
+
+        <form method="post">
+
+            <input class="form-control mb-3"
+                   placeholder="Name"
+                   asp-for="NewUser.Name" />
+
+            <input class="form-control mb-3"
+                   placeholder="Email"
+                   asp-for="NewUser.Email" />
+
+            <input class="form-control mb-3"
+                   placeholder="Gender"
+                   asp-for="NewUser.Gender" />
+
+            <input type="password"
+                   class="form-control mb-3"
+                   placeholder="Password"
+                   asp-for="NewUser.Password" />
+
+            <input class="form-control mb-3"
+                   placeholder="Remark"
+                   asp-for="NewUser.Remark" />
+
+            <button class="btn btn-success w-100">
+                Register
+            </button>
+
+        </form>
+
+        <div class="text-center mt-3 text-primary">
+            @Model.Message
+        </div>
+
+    </div>
+
+</div>

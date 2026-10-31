@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - LoginApp_Kealit</title>
+
+    <link rel="stylesheet"
+          href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <style>
+
+        body {
+            background: linear-gradient(to right,#020024,#090979,#6f00ff);
+            color: white;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-link {
+            color: white !important;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: yellow !important;
+        }
+
+        .navbar-brand {
+            font-size: 28px;
+            font-weight: bold;
+            color: white !important;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar navbar-expand-lg">
+
+<div class="container">
+
+<a class="navbar-brand"
+   asp-page="/Index">
+    LoginApp-Kealit
+</a>
+
+<button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+     id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+@if (Context.Session.GetString("User") == null)
+{
+    <li class="nav-item">
+        <a class="nav-link"
+           asp-page="/Index">
+            Home
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link"
+           asp-page="/Login">
+            Login
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link"
+           asp-page="/Register">
+            Register
+        </a>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link"
+           asp-page="/Home">
+            Home
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link"
+           asp-page="/About">
+            About
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link"
+           asp-page="/Portfolio">
+            Portfolio
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link"
+           asp-page="/Resume">
+            Resume
+        </a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-danger fw-bold" asp-page="/Logout">
+        Logout
+    </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link"
+           asp-page="/Contact">
+            Contact
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-danger"
+           asp-page="/Logout">
+            Logout
+        </a>
+    </li>
+}
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+<div class="container mt-5">
+
+    @RenderBody()
+
+</div>
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
